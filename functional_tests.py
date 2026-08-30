@@ -1,8 +1,9 @@
 from selenium import webdriver
 
 browser = webdriver.Chrome()
+
 browser.get('http://localhost:8000')
 
-print(browser.title)
+assert 'To-Do' in browser.title
 
-assert 'The install worked successfully!' in browser.title
+browser.quit()
